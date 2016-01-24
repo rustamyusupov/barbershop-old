@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Барбершоп «Бородинский»: магазин</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container">
+        <div class="navigation-logo">
+          <a href="index.html"><img src="https://placehold.it/150x50" width="150" height="50" alt="Логотип барбершопа «Бородинский»" /></a>
+        </div>
+        <nav class="main-navigation">
+          <ul>
+            <li>
+              <a href="#">Информация</a>
+            </li>
+            <li>
+              <a href="#">Новости</a>
+            </li>
+            <li>
+              <a href="price.html">Прайс-лист</a>
+            </li>
+            <li class="current">Магазин</li>
+            <li>
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="user-block">
+          <a class="login" href="#">Вход</a>
+        </div>
+      </div>
+    </header>
+    <main class="container">
+      <div class="breadcrumbs">
+        <h2>Средства для ухода</h2>
+        <nav class="breadcrumbs-navigation">
+          <ul>
+            <li>
+              <a href="index.html">Главная</a>
+            </li>
+            <li>
+              <a href="shop.html">Магазин</a>
+            </li>
+            <li class="breadcrumbs-current">Средства для ухода</li>
+          </ul>
+        </nav>
+      </div>
+      <div class="goods">
+        <form class="goods-filters" action="#" method="post">
+          <ul class="producer">
+            <li>
+              <input id="baxtercali-id" type="checkbox" name="baxtercali">
+              <label for="baxtercali-id">Baxter of California</label>
+            </li>
+            <li>
+              <input id="mrnatty-id" type="checkbox" name="mrnatty">
+              <label for="mrnatty-id">Mr Natty</label>
+            </li>
+            <li>
+              <input id="suavecito-id" type="checkbox" name="suavecito">
+              <label for="suavecito-id">Suavecito</label>
+            </li>
+            <li>
+              <input id="malingoetz-id" type="checkbox" name="malingoetz">
+              <label for="malingoetz-id">Malin+Goetz</label>
+            </li>
+            <li>
+              <input id="murrays-id" type="checkbox" name="murrays">
+              <label for="murrays-id">Murray's</label>
+            </li>
+            <li>
+              <input id="amercrew-id" type="checkbox" name="amercrew">
+              <label for="amercrew-id">American Crew</label>
+            </li>
+          </ul>
+          <ul class="items-group">
+            <li>
+              <input id="shaving-id" type="radio" name="groups">
+              <label for="shaving-id">Бритвенные принадлежности</label>
+            </li>
+            <li>
+              <input id="careprod-id" type="radio" name="groups" checked>
+              <label for="careprod-id">Средства для ухода</label>
+            </li>
+            <li>
+              <input id="accessory-id" type="radio" name="groups">
+              <label for="accessory-id">Аксессуары</label>
+            </li>
+          </ul>
+          <button class="btn" type="submit">Показать</button> <!-- TODO: Как сделать переход на новую страницу при отключенном JS? -->
+        </form>
+        <div class="goods-pages">
+          <div class="goods-items">
+            <div class="goods-item">
+              <a href="#">
+                <img src="https://placehold.it/200x160" width="200" height="160" alt="Baxter of California" />
+                <p>Набор для путешествий «Baxter of California»</p>
+              </a>
+              <span class="price">2900</span>
+              <button class="btn">Купить</button>
+            </div>
+            <div class="goods-item">
+              <a href="#">
+                <img src="https://placehold.it/200x160" width="200" height="160" alt="Baxter of California" />
+                <p>Увлажняющий кондиционер «Baxter of California»</p>
+              </a>
+              <span class="price">750</span>
+              <button class="btn">Купить</button>
+            </div>
+            <div class="goods-item">
+              <a href="#">
+                <img src="https://placehold.it/200x160" width="200" height="160" alt="Baxter of California" />
+                <p>Гель для волос «Suavecito»</p>
+              </a>
+              <span class="price">290</span>
+              <button class="btn">Купить</button>
+            </div>
+            <div class="goods-item">
+              <a href="#">
+                <img src="https://placehold.it/200x160" width="200" height="160" alt="Baxter of California" />
+                <p>Гель для укладки волос American Crew</p>
+              </a>
+              <span class="price">500</span>
+              <button class="btn">Купить</button>
+            </div>
+            <div class="goods-item">
+              <a href="#">
+                <img src="https://placehold.it/200x160" width="200" height="160" alt="Baxter of California" />
+                <p>Гель для волос American Crew</p>
+              </a>
+              <span class="price">300</span>
+              <button class="btn">Купить</button>
+            </div>
+            <div class="goods-item">
+              <a href="#">
+                <img src="https://placehold.it/200x160" width="200" height="160" alt="Baxter of California" />
+                <p>Набор для бритья «Baxter of California»</p>
+              </a>
+              <span class="price">3900</span>
+              <button class="btn">Купить</button>
+            </div>
+          </div>
+          <div class="goods-paginator">
+            <a href="#">1</a>
+            <a class="current" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-address">
+          <p>Барбершоп «Бородинский»<br>
+             Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
+             <a href="#">Как нас найти?</a><br>
+             Телефон: +7 (495) 666-02-66</p>
+        </div>
+        <div class="footer-social">
+          <p>Давайте дружить!</p>
+          <a class="social-btn social-vk" href="#">Вконтакте</a>
+          <a class="social-btn social-fb" href="#">Фейсбук</a>
+          <a class="social-btn social-ig" href="#">Инстаграм</a>
+        </div>
+        <div class="footer-copyright">
+          <p>Разработано:</p>
+          <a class="btn" href="https://htmlacademy.ru">HTML Academy</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
