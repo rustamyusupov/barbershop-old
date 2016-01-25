@@ -35,118 +35,147 @@
     <main class="container">
       <div class="breadcrumbs">
         <h2>Средства для ухода</h2>
-        <nav class="breadcrumbs-navigation">
-          <ul>
-            <li>
-              <a href="index.html">Главная</a>
-            </li>
-            <li>
-              <a href="shop.html">Магазин</a>
-            </li>
-            <li class="breadcrumbs-current">Средства для ухода</li>
-          </ul>
-        </nav>
+        <ul class="breadcrumbs-navigation">
+          <li>
+            <a href="index.html">Главная</a>
+          </li>
+          <li>
+            <a href="shop.html">Магазин</a>
+          </li>
+          <li class="breadcrumbs-current">Средства для ухода</li>
+        </ul>
       </div>
       <div class="goods">
-        <form class="goods-filters" action="#" method="post">
-          <ul class="producer">
-            <li>
-              <input id="baxtercali-id" type="checkbox" name="baxtercali">
-              <label for="baxtercali-id">Baxter of California</label>
-            </li>
-            <li>
-              <input id="mrnatty-id" type="checkbox" name="mrnatty">
-              <label for="mrnatty-id">Mr Natty</label>
-            </li>
-            <li>
-              <input id="suavecito-id" type="checkbox" name="suavecito">
-              <label for="suavecito-id">Suavecito</label>
-            </li>
-            <li>
-              <input id="malingoetz-id" type="checkbox" name="malingoetz">
-              <label for="malingoetz-id">Malin+Goetz</label>
-            </li>
-            <li>
-              <input id="murrays-id" type="checkbox" name="murrays">
-              <label for="murrays-id">Murray's</label>
-            </li>
-            <li>
-              <input id="amercrew-id" type="checkbox" name="amercrew">
-              <label for="amercrew-id">American Crew</label>
-            </li>
-          </ul>
-          <ul class="items-group">
-            <li>
-              <input id="shaving-id" type="radio" name="groups">
-              <label for="shaving-id">Бритвенные принадлежности</label>
-            </li>
-            <li>
-              <input id="careprod-id" type="radio" name="groups" checked>
-              <label for="careprod-id">Средства для ухода</label>
-            </li>
-            <li>
-              <input id="accessory-id" type="radio" name="groups">
-              <label for="accessory-id">Аксессуары</label>
-            </li>
-          </ul>
-          <button class="btn" type="submit">Показать</button> <!-- TODO: Как сделать переход на новую страницу при отключенном JS? -->
+        <form action="#" method="post">
+          <aside class="goods-filters">
+            <ul class="producer">
+              <li>
+                <input id="baxtercali-id" type="checkbox" name="baxtercali">
+                <label for="baxtercali-id">Baxter of California</label>
+              </li>
+              <li>
+                <input id="mrnatty-id" type="checkbox" name="mrnatty">
+                <label for="mrnatty-id">Mr Natty</label>
+              </li>
+              <li>
+                <input id="suavecito-id" type="checkbox" name="suavecito">
+                <label for="suavecito-id">Suavecito</label>
+              </li>
+              <li>
+                <input id="malingoetz-id" type="checkbox" name="malingoetz">
+                <label for="malingoetz-id">Malin+Goetz</label>
+              </li>
+              <li>
+                <input id="murrays-id" type="checkbox" name="murrays">
+                <label for="murrays-id">Murray's</label>
+              </li>
+              <li>
+                <input id="amercrew-id" type="checkbox" name="amercrew">
+                <label for="amercrew-id">American Crew</label>
+              </li>
+            </ul>
+            <ul class="items-group">
+              <li>
+                <input id="shaving-id" type="radio" name="groups">
+                <label for="shaving-id">Бритвенные принадлежности</label>
+              </li>
+              <li>
+                <input id="careprod-id" type="radio" name="groups" checked>
+                <label for="careprod-id">Средства для ухода</label>
+              </li>
+              <li>
+                <input id="accessory-id" type="radio" name="groups">
+                <label for="accessory-id">Аксессуары</label>
+              </li>
+            </ul>
+            <button class="btn" type="submit">Показать</button>
+          </aside>
         </form>
         <div class="goods-pages">
           <div class="goods-items">
             <div class="goods-item">
-              <a href="item.html">
-                <img src="https://placehold.it/200x160" width="200" height="160" alt="Baxter of California">
-                <p>Набор для путешествий «Baxter of California»</p>
-              </a>
-              <span class="price">2900</span>
-              <button class="btn">Купить</button>
+              <div class="item-desc">
+                <a href="item.html">
+                  <img src="https://placehold.it/200x160" width="200" height="160" alt="Набор для путешествий «Baxter of California»">
+                </a>
+                <a href="item.html">Набор для путешествий «Baxter of California»</a>
+              </div>
+              <div class="item-buy">
+                <div class="price">2900</div>
+                <a class="btn">Купить</a>
+              </div>
             </div>
             <div class="goods-item">
-              <a href="#">
-                <img src="https://placehold.it/200x160" width="200" height="160" alt="Baxter of California">
-                <p>Увлажняющий кондиционер «Baxter of California»</p>
-              </a>
-              <span class="price">750</span>
-              <button class="btn">Купить</button>
+              <div class="item-desc">
+                <a href="#">
+                  <img src="https://placehold.it/200x160" width="200" height="160" alt="Увлажняющий кондиционер «Baxter of California»">
+                </a>
+                <a href="#">Увлажняющий кондиционер «Baxter of California»</a>
+              </div>
+              <div class="item-buy">
+                <div class="price">750</div>
+                <a class="btn">Купить</a>
+              </div>
             </div>
             <div class="goods-item">
-              <a href="#">
-                <img src="https://placehold.it/200x160" width="200" height="160" alt="Baxter of California">
-                <p>Гель для волос «Suavecito»</p>
-              </a>
-              <span class="price">290</span>
-              <button class="btn">Купить</button>
+              <div class="item-desc">
+                <a href="#">
+                  <img src="https://placehold.it/200x160" width="200" height="160" alt="Гель для волос «Suavecito»">
+                </a>
+                <a href="#">Гель для волос «Suavecito»</a>
+              </div>
+              <div class="item-buy">
+                <div class="price">290</div>
+                <a class="btn">Купить</a>
+              </div>
             </div>
             <div class="goods-item">
-              <a href="#">
-                <img src="https://placehold.it/200x160" width="200" height="160" alt="Baxter of California">
-                <p>Гель для укладки волос American Crew</p>
-              </a>
-              <span class="price">500</span>
-              <button class="btn">Купить</button>
+              <div class="item-desc">
+                <a href="#">
+                  <img src="https://placehold.it/200x160" width="200" height="160" alt="Гель для укладки волос American Crew">
+                </a>
+                <a href="#">Гель для укладки волос American Crew</a>
+              </div>
+              <div class="item-buy">
+                <div class="price">500</div>
+                <a class="btn">Купить</a>
+              </div>
             </div>
             <div class="goods-item">
-              <a href="#">
-                <img src="https://placehold.it/200x160" width="200" height="160" alt="Baxter of California">
-                <p>Гель для волос American Crew</p>
-              </a>
-              <span class="price">300</span>
-              <button class="btn">Купить</button>
+              <div class="item-desc">
+                <a href="#">
+                  <img src="https://placehold.it/200x160" width="200" height="160" alt="Гель для волос American Crew">
+                </a>
+                <a href="#">Гель для волос American Crew</a>
+              </div>
+              <div class="item-buy">
+                <div class="price">300</div>
+                <a class="btn">Купить</a>
+              </div>
             </div>
             <div class="goods-item">
-              <a href="#">
-                <img src="https://placehold.it/200x160" width="200" height="160" alt="Baxter of California">
-                <p>Набор для бритья «Baxter of California»</p>
-              </a>
-              <span class="price">3900</span>
-              <button class="btn">Купить</button>
+              <div class="item-desc">
+                <a href="#">
+                  <img src="https://placehold.it/200x160" width="200" height="160" alt="Набор для бритья «Baxter of California»">
+                </a>
+                <a href="#">Набор для бритья «Baxter of California»</a>
+              </div>
+              <div class="item-buy">
+                <div class="price">3900</div>
+                <a class="btn">Купить</a>
+              </div>
             </div>
-          </div>
-          <div class="goods-paginator">
-            <a href="#">1</a>
-            <a class="current" href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
+          <ul class="goods-paginator">
+            <li>
+              <a href="#">1</a>
+            </li>
+            <li class="current">2</li>
+            <li>
+              <a href="#">3</a>
+            </li>
+            <li>
+              <a href="#">4</a>
+            </li>
           </div>
         </div>
       </div>
