@@ -1,21 +1,17 @@
 body {
-  color: ;
-  font-family: ;
-  line-height: ;
-  font-size: ;
-  font-weight: ;
+  color: #000000;
+  font-family: "PT Sans Narrow", "Tahoma", sans-serif;
+  line-height: 24px;
+  font-size: 14px;
+  font-weight: bold;
 }
+/* TODO: Прописал для заголовков h2 и h3, т.к. не h1 не используется, верно? */
 h2 {
-  color: ;
-  font-family: ;
-  line-height: ;
-  font-size: ;
-  font-weight: ;
+  line-height: auto;
+  font-size: 30px;
 }
+
 h3 {
-  color: ;
-  font-family: ;
-  line-height: ;
-  font-size: ;
-  font-weight: ;
+  line-height: auto;
+  font-size: 24px;
 }
