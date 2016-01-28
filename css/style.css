@@ -5,7 +5,7 @@ body {
   font-size: 14px;
   font-weight: bold;
 }
-/* TODO: Прописал для заголовков h2 и h3, т.к. не h1 не используется, верно? */
+
 h2 {
   line-height: auto;
   font-size: 30px;
