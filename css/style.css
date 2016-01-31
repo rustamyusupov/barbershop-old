@@ -15,3 +15,157 @@ h3 {
   line-height: auto;
   font-size: 24px;
 }
+
+.clearfix::after {
+  content: "";
+
+  display: table;
+  clear: both;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 940px;
+}
+
+.navigation-logo {
+  float: left;
+  margin-right: 20px;
+  width: 140px;
+}
+
+.main-navigation {
+  float: left;
+  width: 620px;
+}
+
+.user-block {
+  float: right;
+  width: 140px;
+}
+
+.main-header {
+  margin-bottom: 60px;
+}
+
+.breadcrumbs {
+  margin-bottom: 60px;
+}
+
+.index-logo {
+  min-height: 204px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  width: 368px;
+}
+
+.features {
+    margin-bottom: 80px;
+}
+
+.features-item {
+  float: left;
+  margin-right: 20px;
+  width: 300px;
+}
+
+.features-item:last-child {
+  margin-right: 0;
+}
+
+.index-info {
+  margin-bottom: 35px;
+  padding: 50px 80px;
+}
+
+.index-info-left {
+  float: left;
+  width: 380px;
+}
+
+.index-info-right {
+  float: right;
+  width: 300px;
+}
+
+.goods {
+  margin-bottom: 50px;
+}
+
+.goods-filters{
+  float: left;
+  margin-right: 20px;
+  width: 220px;
+}
+
+.goods-pages {
+  float: left;
+  width: 700px;
+}
+
+.goods-items {
+  margin-bottom: 25px;
+  width: 700px;
+}
+
+.goods-item {
+  float: left;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  width: 220px;
+}
+
+.goods-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.item-info {
+  margin-bottom: 50px;
+}
+
+/* TODO: Почему все картинки с отступом слева? */
+.item-info-left {
+  float: left;
+  margin-right: 80px;
+  width: 460px;
+}
+
+.gallery-paginator > img {
+  float: left;
+  margin-right: 20px;
+  width: 140px;
+}
+
+/* TODO: что-то сомневаюсь в селекторе  */
+.gallery-paginator:last-child > img {
+  margin-right: 0;
+}
+
+.item-info-right {
+  float: right;
+  margin-top: 25px;
+  width: 400px;
+}
+
+.main-footer {
+  margin-top: 65px;
+  padding-bottom: 40px;
+  padding-top: 60px;
+}
+
+.footer-address {
+  float: left;
+  margin-right: 60px;
+  width: 320px;
+}
+
+.footer-social {
+  float: left;
+  width: 180px;
+}
+
+.footer-copyright {
+  float: right;
+  width: 180px;
+}
