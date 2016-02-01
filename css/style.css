@@ -1,9 +1,9 @@
 body {
   color: #000000;
   font-family: "PT Sans Narrow", "Tahoma", sans-serif;
-  line-height: 24px;
   font-size: 14px;
   font-weight: bold;
+  line-height: 24px;
 }
 
 h2 {
@@ -17,10 +17,9 @@ h3 {
 }
 
 .clearfix::after {
-  content: "";
-
-  display: table;
   clear: both;
+  content: "";
+  display: table;
 }
 
 .container {
@@ -54,14 +53,14 @@ h3 {
 }
 
 .index-logo {
-  min-height: 204px;
   margin: 0 auto;
   margin-bottom: 25px;
+  min-height: 204px;
   width: 368px;
 }
 
 .features {
-    margin-bottom: 80px;
+  margin-bottom: 80px;
 }
 
 .features-item {
@@ -124,21 +123,19 @@ h3 {
   margin-bottom: 50px;
 }
 
-/* TODO: Почему все картинки с отступом слева? */
 .item-info-left {
   float: left;
   margin-right: 80px;
   width: 460px;
 }
 
-.gallery-paginator > img {
+.gallery-paginator-item {
   float: left;
   margin-right: 20px;
   width: 140px;
 }
 
-/* TODO: что-то сомневаюсь в селекторе  */
-.gallery-paginator:last-child > img {
+.gallery-paginator-item:last-child {
   margin-right: 0;
 }
 
