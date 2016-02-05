@@ -1,9 +1,12 @@
 body {
-  color: #000000;
+  background: #000000 url("../img/index-bg.jpg") no-repeat center top;
+  color: #ffffff;
   font-family: "PT Sans Narrow", "Tahoma", sans-serif;
   font-size: 14px;
   font-weight: bold;
   line-height: 24px;
+  min-width: 960px;
+  text-transform: uppercase;
 }
 
 h2 {
@@ -28,6 +31,12 @@ h3 {
   width: 940px;
 }
 
+.main-header {
+  background-color: #000000;
+  color: #ffffff;
+  margin-bottom: 60px;
+}
+
 .navigation-logo {
   float: left;
   margin-right: 20px;
@@ -39,13 +48,66 @@ h3 {
   width: 620px;
 }
 
-.user-block {
-  float: right;
-  width: 140px;
+.main-navigation ul {
+  font-size: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.main-header {
-  margin-bottom: 60px;
+.main-navigation li {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 20px;
+  vertical-align: top;
+}
+
+.main-navigation a {
+  color: #ffffff;
+  display: block;
+  padding: 25px 20px;
+  text-decoration: none;
+}
+
+.main-navigation a:hover {
+  background-color: #242424;
+}
+
+.user-block {
+  float: right;
+  max-width: 140px;
+}
+
+.login {
+  color: #ffffff;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 25px 20px;
+  padding-left: 50px;
+  position: relative;
+  text-decoration: none;
+  vertical-align: top;
+}
+
+.login:hover {
+  background-color: #242424;
+}
+
+.login::before {
+  content: "";
+  background: transparent url("../img/sprite.png") no-repeat;
+  background-position: -10px -93px;
+  height: 16px;
+  left: 20px;
+  opacity: 0.3;
+  position: absolute;
+  top: 27px;
+  width: 18px;
+}
+
+.login:hover::before {
+  opacity: 1;
 }
 
 .breadcrumbs {
@@ -55,7 +117,12 @@ h3 {
 .index-logo {
   margin: 0 auto;
   margin-bottom: 25px;
-  min-height: 204px;
+  height: 204px;
+  width: 368px;
+}
+
+.index-logo img {
+  height: 204px;
   width: 368px;
 }
 
@@ -66,6 +133,7 @@ h3 {
 .features-item {
   float: left;
   margin-right: 20px;
+  text-align: center;
   width: 300px;
 }
 
@@ -73,7 +141,37 @@ h3 {
   margin-right: 0;
 }
 
+.features-name {
+  display: block;
+  font-size: 30px;
+  line-height: 42px;
+  margin-bottom: 30px;
+  padding-bottom: 35px;
+  position: relative;
+}
+
+.features-name::after {
+  background-color: #ffffff;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 20px;
+  left: 50%;
+  margin-left: -10px;
+  position: absolute;
+  transform: rotate(45deg);
+  width: 20px;
+}
+
+.features-item p {
+  margin: 10px;
+  margin-bottom: 0;
+}
+
 .index-info {
+  background: url("../img/index-info-separator.png") no-repeat center,
+    #f8f5f2 url("../img/index-info-bg.png");
+  color: #000000;
   margin-bottom: 35px;
   padding: 50px 80px;
 }
@@ -86,6 +184,136 @@ h3 {
 .index-info-right {
   float: right;
   width: 300px;
+}
+
+.index-info-title {
+  font-size: 30px;
+  line-height: 42px;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.index-info p {
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.news-preview {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /* TODO: Почему в демке 35 правый паддинг, а у меня меньше 70 никак не выходит? */
+  padding-right: 70px;
+}
+
+.news-preview li {
+  margin-bottom: 25px;
+}
+
+.news-preview p {
+  margin-bottom: 0;
+}
+
+.news-preview time {
+  text-transform: none;
+}
+
+.btn {
+  background-color: #000000;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "PT Sans Narrow", "Tahoma", sans-serif;
+  font-size: 14px;
+  /* TODO: Можно ли писать bold вместо 700? */
+  font-weight: bold;
+  line-height: 24px;
+  margin-right: 16px;
+  outline: none;
+  padding: 10px 33px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.btn:active,
+.btn:hover {
+  background-color: #663d15;
+}
+
+.btn.disabled,
+.btn:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.btn.disabled:hover,
+.btn:disabled:hover {
+  background-color: #000000;
+}
+
+.gallery {
+  height: 260px;
+  position: absolute;
+}
+
+.gallery-image {
+  background-color: grey;
+  border: 7px solid #ffffff;
+  height: 164px;
+  margin: 0;
+}
+
+.gallery-content img {
+  width: 286px;
+  height: 164px;
+}
+
+.gallery .btn {
+  bottom: 0;
+  margin: 0;
+  position: absolute;
+  width: 140px;
+}
+
+.gallery-prev {
+  left: 0;
+}
+
+.gallery-next {
+  right: 0;
+}
+
+.registration-form input {
+  background-color: #f9f6f3;
+  border: 2px solid #000000;
+  color: #000000;
+  float: left;
+  font-family: "PT Sans Narrow", "Tahoma", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 24px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  outline: none;
+  padding: 7px 15px;
+  text-transform: uppercase;
+  width: 106px;
+}
+
+.registration-form input:nth-child(even) {
+  margin-right: 0;
+}
+
+.registration-form input:focus {
+  border: 2px solid #663d15;
+}
+
+.registration-form .btn {
+  clear: both;
+  width: 100%;
 }
 
 .goods {
@@ -145,7 +373,12 @@ h3 {
   width: 400px;
 }
 
+Зададим подвалу текстурную заливку, не забыв про цвет фона, и контрастный цвет текста.
+
 .main-footer {
+  /* TODO: Вырезать паттерн из макета */
+  background-color: #252525; /*url()*/
+  color: #ffffff;
   margin-top: 65px;
   padding-bottom: 40px;
   padding-top: 60px;
@@ -157,12 +390,82 @@ h3 {
   width: 320px;
 }
 
+.footer-address a {
+  color: #ffffff;
+}
+
+.footer-address a:hover {
+  text-decoration: none;
+}
+
 .footer-social {
   float: left;
   width: 180px;
+  text-align: center;
+}
+
+.footer-social p {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+/* TODO: Переделать спрайт, добавить иконки соц. сетей в двух состояниях */
+
+.social-btn {
+  background: #000000 url("../img/sprite.png") no-repeat center;
+  display: inline-block;
+  font-size: 0;
+  height: 43px;
+  margin: 0 2px;
+  text-decoration: none;
+  vertical-align: top;
+  width: 43px;
+}
+
+.social-btn:hover {
+  background-color: #ffffff;
+}
+
+.social-vk {
+  background-position: -10px -129px;
+}
+
+.social-fb {
+  background-position: -10px -51px;
+}
+
+.social-ig {
+  background-position: -10px -10px;
+}
+
+.social-vk:hover {
+  /*background-position: 9px -381px;*/
+}
+
+.social-fb:hover {
+  /*background-position: 15px -100px;*/
+}
+
+.social-ig:hover {
+  /*background-position: 12px -242px;*/
 }
 
 .footer-copyright {
   float: right;
-  width: 180px;
+  max-width: 180px;
+}
+
+.footer-copyright p {
+  margin: 0;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.footer-copyright .btn {
+  margin-right: 0;
+}
+
+.footer-copyright .btn:hover {
+  background-color: #ffffff;
+  color: #000000;
 }
