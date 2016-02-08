@@ -1,6 +1,4 @@
 body {
-  background: #000000 url("../img/index-bg.jpg") no-repeat center top;
-  color: #ffffff;
   font-family: "PT Sans Narrow", "Tahoma", sans-serif;
   font-size: 14px;
   font-weight: bold;
@@ -17,6 +15,16 @@ h2 {
 h3 {
   font-size: 24px;
   line-height: auto;
+}
+
+.main-body {
+  background: #000000 url("../img/index-bg.jpg") no-repeat center top;
+  color: #ffffff;
+}
+
+.inner-body {
+  background: #f8f5f2 url("../img/index-info-bg.png");
+  color: #000000;
 }
 
 .clearfix::after {
@@ -39,8 +47,16 @@ h3 {
 
 .navigation-logo {
   float: left;
+  /* TODO: Зачем дублировать здесь размеры блока, если ниже есть размеры изображения? */
+  height: 24px;
   margin-right: 20px;
-  width: 140px;
+  margin-top: 22px;
+  width: 111px;
+}
+
+.navigation-logo img {
+  height: 24px;
+  width: 111px;
 }
 
 .main-navigation {
@@ -69,8 +85,17 @@ h3 {
   text-decoration: none;
 }
 
+.main-navigation .current {
+  border-bottom: 4px solid #ffffff;
+  color: #ffffff;
+  margin: 0 20px;
+  padding: 25px 0;
+  text-decoration: none;
+}
+
 .main-navigation a:hover {
   background-color: #242424;
+  border-bottom: 4px solid #242424;
 }
 
 .user-block {
@@ -92,6 +117,7 @@ h3 {
 
 .login:hover {
   background-color: #242424;
+  border-bottom: 4px solid #242424;
 }
 
 .login::before {
@@ -112,6 +138,46 @@ h3 {
 
 .breadcrumbs {
   margin-bottom: 60px;
+}
+
+.breadcrumbs-navigation {
+  font-size: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumbs-navigation li {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 24px;
+  vertical-align: top;
+}
+
+.breadcrumbs-navigation a {
+  color: #000000;
+  display: block;
+  margin-right: 15px;
+  padding-right: 25px;
+  position: relative;
+  text-decoration: none;
+}
+
+.breadcrumbs-navigation a::after {
+  background-color: #000000;
+  right: 0;
+  content: "";
+  display: block;
+  height: 8px;
+  top: 50%;
+  margin-top: -4px;
+  position: absolute;
+  transform: rotate(45deg);
+  width: 8px;
+}
+
+.breadcrumbs-current {
+  color: #aba9a7;
 }
 
 .index-logo {
@@ -217,6 +283,75 @@ h3 {
 .news-preview time {
   text-transform: none;
 }
+
+.filter-name {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.producer,
+.items-group {
+  font-size: 0;
+  list-style: none;
+  margin: 0;
+  margin-bottom: 50px;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.producer li,
+.items-group li {
+  display: block;
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 10px;
+  margin-left: 39px;
+  position: relative;
+  vertical-align: top;
+}
+
+.producer input,
+.items-group input {
+  display: none;
+}
+
+.producer label::before {
+  border: 2px solid #000000;
+  content: "";
+  display: inline-block;
+  height: 16px;
+  margin-left: -38px;
+  /* TODO: Есть новый способ через trans чего-то там, посмотреть скринкаст */
+  margin-top: -10px;
+  position: absolute;
+  top: 50%;
+  width: 16px;
+}
+
+.producer input[type="checkbox"]:checked {
+  /* TODO: ??? */
+}
+
+.items-group label::before {
+  /* TODO: Нарисовать круг */
+  /*border: 2px solid #000000;*/
+  content: "";
+  display: inline-block;
+  height: 16px;
+  margin-left: -38px;
+  /* TODO: Есть новый способ через trans чего-то там, посмотреть скринкаст */
+  margin-top: -10px;
+  position: absolute;
+  top: 50%;
+  width: 16px;
+}
+
+.items-group input[type="checkbox"]:checked {
+  /* TODO: ??? */
+}
+
+
+
 
 .btn {
   background-color: #000000;

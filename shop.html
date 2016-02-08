@@ -3,13 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>Барбершоп «Бородинский»: магазин</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=cyrillic,latin' rel='stylesheet'>
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="inner-body">
     <header class="main-header">
       <div class="container clearfix">
         <div class="navigation-logo">
-          <a href="index.html"><img src="https://placehold.it/111x24" width="111" height="24" alt="Логотип барбершопа «Бородинский»"></a>
+          <a href="index.html"><img src="img/inner-logo.png" width="111" height="24" alt="Логотип барбершопа «Бородинский»"></a>
         </div>
         <nav class="main-navigation">
           <ul>
@@ -33,7 +35,7 @@
         </div>
       </div>
     </header>
-    <main class="container">
+    <main class="container background">
       <div class="breadcrumbs">
         <h2>Средства для ухода</h2>
         <ul class="breadcrumbs-navigation">
@@ -52,7 +54,7 @@
             <b class="filter-name">Производители:</b>
             <ul class="producer">
               <li>
-                <input id="baxtercali-id" type="checkbox" name="baxtercali">
+                <input id="baxtercali-id" type="checkbox" name="baxtercali" checked>
                 <label for="baxtercali-id">Baxter of California</label>
               </li>
               <li>
@@ -60,7 +62,7 @@
                 <label for="mrnatty-id">Mr Natty</label>
               </li>
               <li>
-                <input id="suavecito-id" type="checkbox" name="suavecito">
+                <input id="suavecito-id" type="checkbox" name="suavecito" checked>
                 <label for="suavecito-id">Suavecito</label>
               </li>
               <li>
@@ -72,7 +74,7 @@
                 <label for="murrays-id">Murray's</label>
               </li>
               <li>
-                <input id="amercrew-id" type="checkbox" name="amercrew">
+                <input id="amercrew-id" type="checkbox" name="amercrew" checked>
                 <label for="amercrew-id">American Crew</label>
               </li>
             </ul>
