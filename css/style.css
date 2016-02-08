@@ -289,9 +289,8 @@ h3 {
   line-height: 30px;
 }
 
-.producer,
-.items-group {
-  font-size: 0;
+.producer {
+  /*font-size: 0;*/
   list-style: none;
   margin: 0;
   margin-bottom: 50px;
@@ -299,8 +298,7 @@ h3 {
   padding: 0;
 }
 
-.producer li,
-.items-group li {
+/*.producer li {
   display: block;
   font-size: 14px;
   line-height: 24px;
@@ -308,46 +306,46 @@ h3 {
   margin-left: 39px;
   position: relative;
   vertical-align: top;
-}
+}*/
 
-.producer input,
-.items-group input {
+/* TODO: Можно ли так, вместо input[type="checkbox"]? */
+.producer input {
   display: none;
 }
 
-.producer label::before {
+/* TODO: Закончить оформление в соответствии с макетом */
+input[type="checkbox"] + label {
+  display: block;
+  margin: 10px 0;
+  line-height: 24px;
+  padding-left: 45px;
+  position: relative;
+  cursor: pointer;
+}
+
+input[type="checkbox"] + label::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
   border: 2px solid #000000;
-  content: "";
-  display: inline-block;
-  height: 16px;
-  margin-left: -38px;
-  /* TODO: Есть новый способ через trans чего-то там, посмотреть скринкаст */
-  margin-top: -10px;
+  background-color: #f9f6f3;
   position: absolute;
-  top: 50%;
-  width: 16px;
+  top: 0;
+  left: 0;
 }
 
-.producer input[type="checkbox"]:checked {
-  /* TODO: ??? */
-}
 
-.items-group label::before {
-  /* TODO: Нарисовать круг */
-  /*border: 2px solid #000000;*/
+
+input[type="checkbox"]:checked + label::after {
   content: "";
-  display: inline-block;
-  height: 16px;
-  margin-left: -38px;
-  /* TODO: Есть новый способ через trans чего-то там, посмотреть скринкаст */
-  margin-top: -10px;
+  height: 12px;
+  width: 12px;
   position: absolute;
-  top: 50%;
-  width: 16px;
-}
-
-.items-group input[type="checkbox"]:checked {
-  /* TODO: ??? */
+  top: 4px;
+  left: 4px;
+  background: url("../img/sprite.png") no-repeat;
+  background-position: -5px -31px;
 }
 
 
