@@ -150,6 +150,7 @@ h3 {
   font-size: 30px;
   line-height: 36px;
   margin: 0;
+  margin-bottom: 20px;
   padding: 0;
 }
 
@@ -490,6 +491,7 @@ input[type="radio"]:checked + label::after {
 
 .goods-item {
   background-color: #ffffff;
+  box-shadow: 0 0 15px 0 rgba(0, 1, 1, 0.2);
   float: left;
   height: 286px;
   margin-bottom: 20px;
@@ -520,27 +522,26 @@ input[type="radio"]:checked + label::after {
 }
 
 .item-buy {
-  margin-left: 16px;
-  width: 187px;
-  height: 43px;
+  font-size: 0;
+  margin: 0 16px;
 }
 
-/* TODO: Туплю, как сделать выравнивание текста в div? */
+/* TODO: Так и не соображу как сделать, чтобы и текст выравнивался и чтобы ширина была фиксированная */
 .item-buy .price {
   background-color: #e5e5e5;
-  float: left;
+  display: inline-block;
+  font-size: 14px;
+  /*padding: 11px 25px;*/
+  line-height: 24px;
+  vertical-align: middle;
   height: 43px;
-  /*padding-left: 15px;
-  padding-top: 15px;*/
-  width: 109px;
+  width: 78px;
 }
 
 .item-buy .btn {
-  float: right;
-  height: 43px;
+  display: inline-block;
   margin: 0;
-  padding: 0;
-  width: 78px;
+  padding: 11px 18px;
 }
 
 .item-info {
@@ -566,32 +567,25 @@ input[type="radio"]:checked + label::after {
   cursor: pointer;
   display: inline-block;
   font-size: 14px;
-  height: 43px;
   line-height: 24px;
   margin-right: 7px;
-  text-align: center;
-  width: 43px;
-
-  /* TODO: Как выровнять текст по вертикали внутри блока? */
-  vertical-align: middle;
+  vertical-align: top;
 }
 
 .goods-paginator li.current {
   background-color: #ffffff;
   color: #000000;
   cursor: default;
+  padding: 10px 19px;
 }
 
+/* TODO: При двухзначных цифрах блок увеличиться в размерах, как правильно его стилизовать? */
 .goods-paginator a {
   color: #ffffff;
-  display: inline-block;
-
+  display: block;
+  padding: 10px 19px;
   text-decoration: none;
 }
-
-
-
-
 
 .gallery-paginator-item {
   float: left;
