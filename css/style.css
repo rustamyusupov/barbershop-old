@@ -1,4 +1,6 @@
 body {
+  background: #000000 url("../img/index-bg.jpg") no-repeat center top;
+  color: #ffffff;
   font-family: "PT Sans Narrow", "Tahoma", sans-serif;
   font-size: 14px;
   font-weight: bold;
@@ -15,11 +17,6 @@ h2 {
 h3 {
   font-size: 24px;
   line-height: auto;
-}
-
-.main-body {
-  background: #000000 url("../img/index-bg.jpg") no-repeat center top;
-  color: #ffffff;
 }
 
 .inner-body {
@@ -42,7 +39,7 @@ h3 {
 .main-header {
   background-color: #000000;
   color: #ffffff;
-  margin-bottom: 60px;
+  margin-bottom: 55px;
 }
 
 .navigation-logo {
@@ -85,17 +82,27 @@ h3 {
   text-decoration: none;
 }
 
-.main-navigation .current {
-  border-bottom: 4px solid #ffffff;
-  color: #ffffff;
-  margin: 0 20px;
-  padding: 25px 0;
-  text-decoration: none;
-}
-
 .main-navigation a:hover {
   background-color: #242424;
-  border-bottom: 4px solid #242424;
+}
+
+.main-navigation-current {
+  position: relative;
+}
+
+.main-navigation-current::after {
+  background-color: #ffffff;
+  bottom: 0;
+  content: "";
+  height: 5px;
+  left: 20px;
+  position: absolute;
+  right: 20px;
+}
+
+.main-navigation-current span {
+  display: block;
+  padding: 25px 20px;
 }
 
 .user-block {
@@ -117,7 +124,6 @@ h3 {
 
 .login:hover {
   background-color: #242424;
-  border-bottom: 4px solid #242424;
 }
 
 .login::before {
@@ -137,7 +143,14 @@ h3 {
 }
 
 .breadcrumbs {
-  margin-bottom: 60px;
+  margin-bottom: 55px;
+}
+
+.breadcrumbs h2 {
+  font-size: 30px;
+  line-height: 36px;
+  margin: 0;
+  padding: 0;
 }
 
 .breadcrumbs-navigation {
@@ -161,6 +174,10 @@ h3 {
   padding-right: 25px;
   position: relative;
   text-decoration: none;
+}
+
+.breadcrumbs-navigation a:hover {
+  text-decoration: underline;;
 }
 
 .breadcrumbs-navigation a::after {
@@ -289,67 +306,69 @@ h3 {
   line-height: 30px;
 }
 
-.producer {
-  /*font-size: 0;*/
+.producer,
+.items-group {
   list-style: none;
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   margin-top: 20px;
   padding: 0;
+  width: 170px;
 }
 
-/*.producer li {
-  display: block;
-  font-size: 14px;
-  line-height: 24px;
-  margin-bottom: 10px;
-  margin-left: 39px;
-  position: relative;
-  vertical-align: top;
-}*/
-
-/* TODO: Можно ли так, вместо input[type="checkbox"]? */
-.producer input {
+input[type="checkbox"],
+input[type="radio"] {
   display: none;
 }
 
-/* TODO: Закончить оформление в соответствии с макетом */
-input[type="checkbox"] + label {
-  display: block;
-  margin: 10px 0;
-  line-height: 24px;
-  padding-left: 45px;
-  position: relative;
+input[type="checkbox"] + label,
+input[type="radio"] + label {
   cursor: pointer;
+  display: block;
+  line-height: 24px;
+  margin: 13px 0;
+  padding-left: 40px;
+  position: relative;
 }
 
-input[type="checkbox"] + label::before {
+input[type="checkbox"] + label::before,
+input[type="radio"] + label::before {
+  background-color: #f9f6f3;
+  border: 2px solid #000000;
   content: "";
   display: block;
-  width: 16px;
   height: 16px;
-  border: 2px solid #000000;
-  background-color: #f9f6f3;
-  position: absolute;
-  top: 0;
   left: 0;
+  position: absolute;
+  top: 1px;
+  width: 16px;
 }
 
-
+input[type="radio"] + label::before {
+  border-radius: 50%;
+}
 
 input[type="checkbox"]:checked + label::after {
-  content: "";
-  height: 12px;
-  width: 12px;
-  position: absolute;
-  top: 4px;
-  left: 4px;
   background: url("../img/sprite.png") no-repeat;
   background-position: -5px -31px;
+  content: "";
+  height: 12px;
+  left: 4px;
+  position: absolute;
+  top: 5px;
+  width: 12px;
 }
 
-
-
+input[type="radio"]:checked + label::after {
+  background-color: #000000;
+  border-radius: 50%;
+  content: "";
+  height: 8px;
+  left: 6px;
+  position: absolute;
+  top: 7px;
+  width: 8px;
+}
 
 .btn {
   background-color: #000000;
@@ -470,14 +489,58 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .goods-item {
+  background-color: #ffffff;
   float: left;
+  height: 286px;
   margin-bottom: 20px;
   margin-right: 20px;
   width: 220px;
 }
 
+.goods-item img {
+  height: 220;
+  width: 165;
+}
+
 .goods-item:nth-child(3n) {
   margin-right: 0;
+}
+
+.item-desc {
+  font-size: 14px;
+  line-height: 18px;
+  margin-left: 16px;
+  margin-bottom: 15px;
+  width: 187px;
+}
+
+.item-desc-use {
+  display: block;
+  text-transform: none;
+}
+
+.item-buy {
+  margin-left: 16px;
+  width: 187px;
+  height: 43px;
+}
+
+/* TODO: Туплю, как сделать выравнивание текста в div? */
+.item-buy .price {
+  background-color: #e5e5e5;
+  float: left;
+  height: 43px;
+  /*padding-left: 15px;
+  padding-top: 15px;*/
+  width: 109px;
+}
+
+.item-buy .btn {
+  float: right;
+  height: 43px;
+  margin: 0;
+  padding: 0;
+  width: 78px;
 }
 
 .item-info {
@@ -489,6 +552,46 @@ input[type="checkbox"]:checked + label::after {
   margin-right: 80px;
   width: 460px;
 }
+
+.goods-paginator {
+  font-size: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.goods-paginator li {
+  background-color: #000000;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  height: 43px;
+  line-height: 24px;
+  margin-right: 7px;
+  text-align: center;
+  width: 43px;
+
+  /* TODO: Как выровнять текст по вертикали внутри блока? */
+  vertical-align: middle;
+}
+
+.goods-paginator li.current {
+  background-color: #ffffff;
+  color: #000000;
+  cursor: default;
+}
+
+.goods-paginator a {
+  color: #ffffff;
+  display: inline-block;
+
+  text-decoration: none;
+}
+
+
+
+
 
 .gallery-paginator-item {
   float: left;
@@ -605,11 +708,3 @@ input[type="checkbox"]:checked + label::after {
   background-color: #ffffff;
   color: #000000;
 }
-
-
-/*.
-.sprite-checkbox-active {
-    width: 12px;
-    height: 12px;
-    background-position: -5px -31px;
-}*/
