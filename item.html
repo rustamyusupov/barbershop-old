@@ -3,13 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>Барбершоп «Бородинский»: Набор для путешествий «Baxter of California»</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=cyrillic,latin' rel='stylesheet'>
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="inner-body">
     <header class="main-header">
       <div class="container clearfix">
         <div class="navigation-logo">
-          <a href="index.html"><img src="https://placehold.it/111x24" width="111" height="24" alt="Логотип барбершопа «Бородинский»"></a>
+          <a href="index.html"><img src="img/inner-logo.png" width="111" height="24" alt="Логотип барбершопа «Бородинский»"></a>
         </div>
         <nav class="main-navigation">
           <ul>
@@ -22,7 +24,9 @@
             <li>
               <a href="#">Прайс-лист</a>
             </li>
-            <li class="current">Магазин</li>
+            <li class="main-navigation-current">
+              <span>Магазин</span>
+            </li>
             <li>
               <a href="#">Контакты</a>
             </li>
@@ -51,27 +55,29 @@
       </div>
       <div class="item-info clearfix">
         <div class="item-info-left">
-          <div class="gallery">
-            <figure class="gallery-image">
+          <div class="item-gallery">
+            <figure class="item-gallery-image">
               <img src="img/item-bc-travel-kit-big.jpg" width="460" height="498" alt="Фотогалерея">
             </figure>
             <figure class="gallery-paginator clearfix">
-              <a class="btn gallery-paginator-item" href="#"><img src="img/item-bc-travel-kit-small1.jpg"  width="140" height="149" alt=""></a>
-              <a class="btn gallery-paginator-item" href="#"><img src="img/item-bc-travel-kit-small2.jpg"  width="140" height="149" alt=""></a>
-              <a class="btn gallery-paginator-item" href="#"><img src="img/item-bc-travel-kit-small3.jpg"  width="140" height="149" alt=""></a>
+              <a class="gallery-paginator-item" href="#"><img src="img/item-bc-travel-kit-small1.jpg"  width="140" height="149" alt=""></a>
+              <a class="gallery-paginator-item" href="#"><img src="img/item-bc-travel-kit-small2.jpg"  width="140" height="149" alt=""></a>
+              <a class="gallery-paginator-item" href="#"><img src="img/item-bc-travel-kit-small3.jpg"  width="140" height="149" alt=""></a>
             </figure>
           </div>
         </div>
         <div class="item-info-right">
-          <div class="item-header">
+          <div class="item-right-header clearfix">
             <b class="availability">Есть в наличии</b>
             <b class="article">Артикул: Dexter-AE</b>
           </div>
-          <div class="item-description">
+          <div class="item-right-description">
             <p>Travel kit — необходимый аксессуар во время любого путешествия. В аккуратной кожанной сумке находится все, что нужно для бритья и ухода за кожей во время рабочей поездки или отдыха: средство для умывания, увлажняющий крем, крем для бритья, крем после бритья, шампунь. Набор также может стать отличным подарком.</p>
-            <span class="price">2900</span>
-            <a class="btn" href="#">Купить</a>
-            <h3 class="item-title">В набор входят</h3>
+            <div class="item-buy">
+              <div class="price">2900 руб.</div>
+              <a class="btn" href="#">Купить</a>
+            </div>
+            <h3 class="item-title">В набор входят:</h3>
             <ul class="item-content">
               <li>
                 Средство для умывания (50 мл)

@@ -523,6 +523,9 @@ input[type="radio"]:checked + label::after {
 
 .item-buy {
   font-size: 0;
+}
+
+.goods-item .item-buy {
   margin: 0 16px;
 }
 
@@ -546,16 +549,6 @@ input[type="radio"]:checked + label::after {
   text-align: center;
   vertical-align: middle;
   width: 78px;
-}
-
-.item-info {
-  margin-bottom: 50px;
-}
-
-.item-info-left {
-  float: left;
-  margin-right: 80px;
-  width: 460px;
 }
 
 .goods-paginator {
@@ -589,7 +582,38 @@ input[type="radio"]:checked + label::after {
   text-decoration: none;
 }
 
+.item-info {
+  margin-bottom: 50px;
+}
+
+.item-info-left {
+  float: left;
+  margin-right: 80px;
+  width: 460px;
+}
+
+.item-gallery-image {
+  box-shadow: 0 0 15px 0 rgba(0, 1, 1, 0.2);
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.item-gallery-image img {
+  display: block;
+  height: 498px;
+  width: 460px;
+}
+
+.gallery-paginator {
+  margin: 0;
+}
+
+.gallery-paginator img {
+  display: block;
+}
+
 .gallery-paginator-item {
+  box-shadow: 0 0 15px 0 rgba(0, 1, 1, 0.2);
   float: left;
   margin-right: 20px;
   width: 140px;
@@ -601,8 +625,63 @@ input[type="radio"]:checked + label::after {
 
 .item-info-right {
   float: right;
-  margin-top: 25px;
+  margin-top: 21px;
   width: 400px;
+}
+
+.item-right-header {
+  margin-bottom: 33px;
+}
+
+.item-right-header .availability {
+  float: left;
+}
+
+.item-right-header .article {
+  color: #aeaeae;
+  float: right;
+}
+
+.item-right-description p {
+  margin-bottom: 38px;
+}
+
+.item-right-description .item-buy {
+  margin-bottom: 65px;
+}
+
+.item-right-description .item-title {
+  margin-bottom: 33px;
+}
+
+.item-right-description .item-content{
+  font-size: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item-content li {
+  display: block;
+  font-size: 14px;
+  line-height: 24px;
+  padding-left: 22px;
+  position: relative;
+  vertical-align: top;
+}
+
+.item-content li::after {
+  background-color: #000000;
+  left: 0;
+  content: "";
+  display: block;
+  height: 8px;
+  top: 50%;
+  margin-left: 2px;
+  margin-top: -4px;
+  position: absolute;
+  transform: rotate(45deg);
+  width: 8px;
 }
 
 .main-footer {
