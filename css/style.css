@@ -526,22 +526,26 @@ input[type="radio"]:checked + label::after {
   margin: 0 16px;
 }
 
-/* TODO: Так и не соображу как сделать, чтобы и текст выравнивался и чтобы ширина была фиксированная */
 .item-buy .price {
   background-color: #e5e5e5;
   display: inline-block;
   font-size: 14px;
-  /*padding: 11px 25px;*/
   line-height: 24px;
+  padding: 11px 0;
+  text-align: center;
   vertical-align: middle;
-  height: 43px;
-  width: 78px;
+  width: 109px;
 }
 
 .item-buy .btn {
   display: inline-block;
+  font-size: 14px;
+  line-height: 24px;
   margin: 0;
-  padding: 11px 18px;
+  padding: 11px 0;
+  text-align: center;
+  vertical-align: middle;
+  width: 78px;
 }
 
 .item-info {
@@ -563,27 +567,25 @@ input[type="radio"]:checked + label::after {
 
 .goods-paginator li {
   background-color: #000000;
-  color: #ffffff;
   cursor: pointer;
   display: inline-block;
   font-size: 14px;
   line-height: 24px;
   margin-right: 7px;
-  vertical-align: top;
+  padding: 10px 0;
+  text-align: center;
+  vertical-align: middle;
+  width: 43px;
 }
 
-.goods-paginator li.current {
+.goods-paginator .current {
   background-color: #ffffff;
   color: #000000;
   cursor: default;
-  padding: 10px 19px;
 }
 
-/* TODO: При двухзначных цифрах блок увеличиться в размерах, как правильно его стилизовать? */
 .goods-paginator a {
   color: #ffffff;
-  display: block;
-  padding: 10px 19px;
   text-decoration: none;
 }
 
